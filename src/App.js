@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import UserAuth from './Context/UserAuth';
+import Login from './Components/Login';
+import UserActivity from './Context/UserActivity';
+import UserInput from './Components/UserInput';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserAuth >
+      <UserActivity>
+
+      <Login/>
+      <UserInput/>
+      </UserActivity>
+  
+    </UserAuth>
   );
 }
 
